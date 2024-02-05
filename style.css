@@ -1,25 +1,29 @@
 body {
   height: 100%;
   margin: 0;
-  background-color: rgb(69, 69, 69);
-  color: white;
-  font-family: monospace;
+  padding: 0;
+  background-color: rgba(69, 69, 69, 0); /* Set alpha value to 0 for transparency */
+  color: #9966ff; /* Color lila pastel */
+  font-family: 'Cascadia Code', monospace;
   text-align: center;
   overflow: hidden;
+  font-weight: bold; /* Añadido para hacer la fuente más negrita */
 }
 
-#progress, #progress-value {
+#progress,
+#progress-value {
   height: 10vh;
 }
 
 #progress {
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(57, 155, 137, 0.5);
 }
 
 #progress-value {
   width: 0;
-  background-color: white;
+  background-color: rgba(232, 225, 112, 0.8);
+  cursor: url('willy.webp') 30 30, auto;
 }
 
 #clock {
@@ -30,18 +34,6 @@ body {
 #text {
   font-size: 10vw;
   line-height: 10vw;
-}
-
-hr {
-  margin: 1rem 0;
-  color: inherit;
-  background-color: currentColor;
-  border: 0;
-  opacity: .25;
-}
-
-hr:not([size]) {
-  height: 1px;
 }
 
 button {
@@ -58,9 +50,10 @@ button {
   -moz-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
   font-size: 1rem;
-  border-radius: .5rem;
+  font-weight: bold; /* Añadido para hacer la fuente del botón más negrita */
+  border-radius: 0.5rem;
   color: #000;
   background-color: #f8f9fa;
 }
@@ -85,4 +78,17 @@ button:active {
 .btn-group>button+button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+#text {
+  font-size: 10vw;
+  line-height: 10vw;
+  margin-bottom: 20px; /* Agrega un margen inferior de 20px (ajusta según sea necesario) */
+}
+
+#mode-buttons {
+  margin-top: 40px; /* Agrega un margen superior de 20px (ajusta según sea necesario) */
+}
+
+#mode-buttons button {
+  margin-right: 10px; /* Agrega un margen derecho de 10px entre los botones (ajusta según sea necesario) */
 }
